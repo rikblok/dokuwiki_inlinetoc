@@ -1,15 +1,12 @@
-
+// https://www.dokuwiki.org/plugin:inlinetoc#hiding_dokuwiki_toc_for_adora_belle
+// by s.sahara 2013/05/13
 function hideDokuwikiToc() {
-    if(document.getElementById('inlinetoc2')) {
-        var elements = document.getElementsByTagName('div');
-        for(var i=0; i < elements.length; i++) {
-            if(elements[i].className == 'toc') {
-                elements[i].style.display = 'none';
-                break;
-            }
-        }
+    var $toc = jQuery('#dw__toc');
+    var $toc2= jQuery('div.inlinetoc2');
+    if($toc2.length && $toc.length) {
+        $toc.css('display', 'none');
     }
 }
 jQuery(function(){
-	hideDokuwikiToc();
+    hideDokuwikiToc();
 });
