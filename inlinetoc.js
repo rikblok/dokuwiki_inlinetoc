@@ -10,5 +10,6 @@ function hideDokuwikiToc() {
         }
     }
 }
-
-addInitEvent(hideDokuwikiToc);
+jQuery(function(){
+	hideDokuwikiToc();
+});
